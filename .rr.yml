@@ -1,0 +1,10 @@
+rpc:
+  enable: true
+  listen: tcp://:6001
+grpc:
+  listen: "tcp://:8080"
+  proto: "./proto/health.proto"
+  workers:
+    command: "php public/index.php"
+    pool:
+      numWorkers: 1

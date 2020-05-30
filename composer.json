@@ -1,0 +1,33 @@
+{
+  "name": "beloys/example-docker-php-grpc",
+  "description": "Example of gRPC client and server",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mike",
+      "email": "beloysdev@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "7.4.*",
+    "ext-zip": "*",
+    "ext-grpc": "*",
+    "ext-json": "*",
+    "spiral/php-grpc": "^1.0",
+    "spiral/roadrunner": "^1.4",
+    "grpc/grpc": "^1.27"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/",
+      "GPBMetadata\\": "generated/GPBMetadata/",
+      "Grpc\\Health\\": "generated/Grpc/Health/"
+    }
+  },
+  "scripts": {
+    "proto:generate": "rm -rf ./generated/* && protoc --proto_path=./proto --php_out=./generated/ --grpc_out=./generated/ --plugin=protoc-gen-grpc=/usr/local/bin/grpc_php_plugin ./proto/*.proto && protoc --proto_path=./proto --php_out=./generated/ --grpc_out=./generated/ --plugin=protoc-gen-grpc=/usr/local/bin/protoc-gen-php-grpc ./proto/*.proto",
+    "serve": "rr-grpc  serve -d -v",
+    "client": "php client.php"
+  }
+}
