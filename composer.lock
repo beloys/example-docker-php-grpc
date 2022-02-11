@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "502b9cb0c59e58eb993b822589bc6875",
+    "content-hash": "a528df505cc0221379f404b84eb3099e",
     "packages": [
         {
             "name": "google/protobuf",
-            "version": "v3.12.2",
+            "version": "v3.19.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/protocolbuffers/protobuf-php.git",
-                "reference": "571f9a4ba39826a18611ae568d97b6007954c070"
+                "reference": "6f0a54186f133aff98f49d0f36a32d4a4f7d4cbd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/571f9a4ba39826a18611ae568d97b6007954c070",
-                "reference": "571f9a4ba39826a18611ae568d97b6007954c070",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/6f0a54186f133aff98f49d0f36a32d4a4f7d4cbd",
+                "reference": "6f0a54186f133aff98f49d0f36a32d4a4f7d4cbd",
                 "shasum": ""
             },
             "require": {
@@ -45,7 +45,7 @@
             "keywords": [
                 "proto"
             ],
-            "time": "2020-05-27T17:57:58+00:00"
+            "time": "2022-01-28T17:23:32+00:00"
         },
         {
             "name": "grpc/grpc",
@@ -395,12 +395,12 @@
             "version": "v2.4.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/spiral/goridge.git",
+                "url": "https://github.com/spiral/goridge-php.git",
                 "reference": "c522eec9d8215c6059eeb4647d37003a2726e346"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spiral/goridge/zipball/c522eec9d8215c6059eeb4647d37003a2726e346",
+                "url": "https://api.github.com/repos/spiral/goridge-php/zipball/c522eec9d8215c6059eeb4647d37003a2726e346",
                 "reference": "c522eec9d8215c6059eeb4647d37003a2726e346",
                 "shasum": ""
             },
@@ -415,12 +415,12 @@
             },
             "type": "goridge",
             "autoload": {
-                "psr-4": {
-                    "Spiral\\Goridge\\": "src/"
-                },
                 "files": [
                     "src/functions.php"
-                ]
+                ],
+                "psr-4": {
+                    "Spiral\\Goridge\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -476,6 +476,7 @@
                 }
             ],
             "description": "High-Performance GRPC server for PHP applications",
+            "abandoned": "spiral/roadrunner-grpc",
             "time": "2020-05-25T14:35:59+00:00"
         },
         {
@@ -718,12 +719,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php73\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php73\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -848,7 +849,8 @@
     "platform": {
         "php": "7.4.*",
         "ext-zip": "*",
-        "ext-grpc": "*"
+        "ext-grpc": "*",
+        "ext-json": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "1.1.0"
